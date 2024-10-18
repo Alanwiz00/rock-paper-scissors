@@ -53,4 +53,21 @@ function playRound(humanChoice, botChoice) {
     }
 }
 
+function playGame(){
 
+    for (let i = 0; i < 5; i++) {
+    humanChoice = getHumanChoice();
+    botChoice = getBotChoice();
+    
+    playRound(humanChoice, botChoice);
+    }
+    if (humanScore > botScore) {
+        console.log(`You win with ${humanScore} scores`);
+    } else if (botScore > humanScore) {
+        console.log(`You loose to bot with ${botScore} scores`);
+    } else {
+        console.log(`It's a tie! You both have ${humanScore} scores`);
+    }
+}
+
+playGame();
