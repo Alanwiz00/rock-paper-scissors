@@ -22,7 +22,6 @@ function getHumanChoice() {
     choice = choice.trim().toLowerCase();
     
     if (choice === "rock" || choice === "paper" || choice === "scissors")  {
-        console.log(`You choose ${choice}`);
         return choice;
     } else {
         return getHumanChoice();
