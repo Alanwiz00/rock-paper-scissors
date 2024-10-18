@@ -12,3 +12,21 @@ function getBotChoice() {
     
 }
 
+function getHumanChoice() {
+    let choice = prompt("Please input your choice: Rock, Paper, or Scissors", );
+
+    if (choice === null)  {
+        return;
+    }
+
+    choice = choice.trim().toLowerCase();
+    
+    if (choice === "rock" || choice === "paper" || choice === "scissors")  {
+        console.log(`You choose ${choice}`);
+        return choice;
+    } else {
+        return getHumanChoice();
+    }
+}
+
+
