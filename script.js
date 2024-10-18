@@ -30,3 +30,27 @@ function getHumanChoice() {
 }
 
 
+let humanScore = 0;
+let botScore = 0
+
+function playRound(humanChoice, botChoice) {
+    humanChoice = humanChoice.toLowerCase();
+    botChoice = botChoice.toLowerCase();
+
+    if (humanChoice == botChoice) {
+        console.log(`You chose ${humanChoice} and Bot chose ${botChoice}!!! It's a tie... Your score is ${humanScore}`);
+    }
+    else if(
+        (humanChoice == "paper" && botChoice == "rock") 
+        || (humanChoice == "rock" && botChoice == "scissors")
+        || (humanChoice == "scissors" && botChoice == "paper")
+    ) {
+        humanScore++;
+        console.log(`You chose ${humanChoice} and Bot chose ${botChoice}!!! You won and yur score is ${humanScore}`);
+    } else {
+        botScore++;
+        console.log(`You chose ${humanChoice} and Bot chose ${botChoice}!!! You loose and yur score is ${humanScore}`);
+    }
+}
+
+
