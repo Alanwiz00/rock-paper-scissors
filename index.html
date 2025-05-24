@@ -6,7 +6,29 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="container" style= "width: 500px; margin: 50px auto; background-color: #85e8fc; padding: 20px; border-radius: 10px";>
+        <div class="btn-group" style="display: flex; justify-content: space-around; ">
+            <div class="rock-bg" style="display: flex; flex-direction: column; background-color: #ffea00; padding: 10px; border-radius: 10px;">
+                <button id="rock-btn" style="background-color: #4CAF50; color: white; font-weight: 900; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">ROCK 🗿</button>
+            </div>
+            <div class="paper-bg" style="display: flex; flex-direction: column; background-color: #ffea00; padding: 10px; border-radius: 10px;">
+                <button id="paper-btn" style="background-color: #2196F3; color: white; font-weight: 900; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">PAPER 📃</button>
+            </div>
+            <div class="scissors-bg" style="display: flex; flex-direction: column; background-color: #ffea00; padding: 10px; border-radius: 10px;">
+                <button id="scissors-btn" style="background-color: #f44336; color: white; font-weight: 900; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">SCISSORS ✂️</button>
+            </div>
+        </div>
+        <div id="score-board" >
+            <h2 style="margin-bottom: 0;padding-bottom: 0;">SCORE</h2>
+            <div id="player-scores">
+                <div id="human"></div>
+                <div id="bot"></div>
+            </div>
+            <p id="stat" style="font-size: 10px;"></p>
+        </div>
+    </div>
+
     <script src="script.js"></script>
-    
+
 </body>
 </html>
