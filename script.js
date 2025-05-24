@@ -55,20 +55,18 @@ const bot = document.querySelector("#bot");
 paperBtn.addEventListener("click", () => {
     const humanChoice = "paper";
     const botChoice = getBotChoice();
-    console.log(`Your score is ${humanScore} and Bot's score is ${botScore}`);    playRound(humanChoice, botChoice);
+    playRound(humanChoice, botChoice);
 });
 
 rockBtn.addEventListener("click", () => {
     const humanChoice = "rock";
     const botChoice = getBotChoice();
-    console.log(`Your score is ${humanScore} and Bot's score is ${botScore}`);
     playRound(humanChoice, botChoice);
 });
 
 scissorsBtn.addEventListener("click", () => {
     const humanChoice = "scissors";
     const botChoice = getBotChoice();
-    console.log(`Your score is ${humanScore} and Bot's score is ${botScore}`);
     playRound(humanChoice, botChoice);
 });
 
@@ -109,11 +107,11 @@ function resetGame() {
     const stat = document.querySelector("#stat");
     // Show a popup message announcing the winner
     if (humanScore === 5) {
-        alert("Congratulations 🎉, You win!!!");
+        alert(`Congratulations 🎉, You win!!!\nPress "OK" to play another round.`);
         humanScore = 0;
         botScore = 0;
     } else if (botScore === 5) {
-        alert("You lose 😕!!!");
+        alert(`You lose 😕!!!\nPress "OK" to try again.`);
         humanScore = 0;
         botScore = 0;
     }
