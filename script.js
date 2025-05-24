@@ -35,10 +35,8 @@ function playRound(humanChoice, botChoice) {
     if(humanWins
     ) {
         humanScore++;
-        console.log(`You chose ${humanChoice} and Bot chose ${botChoice}!!! You won and yur score is ${humanScore}`);
     } else if (botWins){
         botScore++;
-        console.log(`You chose ${humanChoice} and Bot chose ${botChoice}!!! You loose and yur score is ${humanScore}`);
     }
     updateScores();
     updateStat(humanChoice, botChoice, tie, humanWins, botWins);
